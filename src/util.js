@@ -4,7 +4,8 @@ import { Circle, Popup } from 'react-leaflet';
 
 const casesTypeColors = {
   cases: {
-    hex: '#cc1034',
+    hex: '#CC1034',
+    //'#cc1034',
     multiplier: 800,
   },
   recovered: {
@@ -28,6 +29,9 @@ export const sortData = (data) => {
   });
   return sortedData;
 };
+
+export const prettyPrintStat = (stat) =>
+  stat ? `+${numeral(stat).format('0.0a')}` : '+0';
 
 //Draw circls on the map with tooltips
 export const showDataOnMap = (data, casesType = 'cases') =>

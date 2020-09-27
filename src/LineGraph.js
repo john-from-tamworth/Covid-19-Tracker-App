@@ -46,22 +46,22 @@ const options = {
   },
 };
 
-function LineGraph({ casesType = 'cases' }) {
+function LineGraph({ casesType, ...props }) {
   const [data, setData] = useState({});
 
-  const buildChartData = (data) => {
-    const chartData = [];
+  const buildChartData = (data, casesType) => {
+    let chartData = [];
     let lastDataPoint;
 
     for (let date in data.cases) {
       if (lastDataPoint) {
-        const newDataPoint = {
+        let newDataPoint = {
           x: date,
-          y: data['cases'][date] - lastDataPoint,
+          y: data[casesType][date] - lastDataPoint,
         };
         chartData.push(newDataPoint);
       }
-      lastDataPoint = data['cases'][date];
+      lastDataPoint = data[casesType][date];
     }
     return chartData;
   };
@@ -73,7 +73,7 @@ function LineGraph({ casesType = 'cases' }) {
           return response.json();
         })
         .then((data) => {
-          let chartData = buildChartData(data, 'cases');
+          let chartData = buildChartData(data, casesType);
           setData(chartData);
         });
     };
@@ -81,15 +81,15 @@ function LineGraph({ casesType = 'cases' }) {
   }, [casesType]);
 
   return (
-    <div>
+    <div className={props.className}>
       {data?.length > 0 && (
         <Line
           options={options}
           data={{
             datasets: [
               {
-                backgroundColor: '#FFCCA7',
-                borderColor: '#FEA15B',
+                backgroundColor: '#cfcfcf',
+                borderColor: '#6a6b6a',
                 data: data,
               },
             ],
