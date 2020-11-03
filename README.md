@@ -1,3 +1,10 @@
+## Overview
+
+This is a Covid 19 Tracker web app.  Data is pulled from disease.sh and their API.  Users can filter via Country from the dropdown menu at the top of the page.  The app uses several libraries to render the data such as Tables, Charts and a Map.
+
+Please visit https://covid-tracker-8fb40.firebaseapp.com/ to use the app.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
