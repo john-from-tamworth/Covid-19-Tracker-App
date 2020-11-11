@@ -2,9 +2,9 @@
 
 This is a Covid 19 Tracker web app.  Data is pulled from disease.sh and their API.  Users can filter via Country from the dropdown menu at the top of the page.  The app uses several libraries to render the data such as Tables, Charts and a Map.  The App is hosted at both AWS and Firebase, this is because I am learning both services.
 
-Please click [here](https://master.d3dy8c8069b990.amplifyapp.com/) to view the App deplyed at AWS.
+Please click [here](https://master.d3dy8c8069b990.amplifyapp.com/) to view the App deplyed at **AWS**.
 
-Alternatively click [here](https://covid-tracker-8fb40.firebaseapp.com/) to use the App hosted at Firebase.
+Alternatively click [here](https://covid-tracker-8fb40.firebaseapp.com/) to use the App hosted at **Firebase**.
 
 
 
