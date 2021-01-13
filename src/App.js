@@ -80,6 +80,7 @@ function App() {
       <div className='app__left'>
         {/* Header */}
         <div className='app__header'>
+        <img src='/covidclear.png' height='100px' width='100px' alt='covid-19' />
           <h1>COVID - 19 Tracker</h1>
           <FormControl className='app__dropdown'>
             <Select

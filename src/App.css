@@ -3,7 +3,9 @@
 }
 
 body {
-  background-color: #e6eff4;
+  /*background-color: #e6eff4;*/
+  background: rgb(203,203,255);
+  background: linear-gradient(315deg, rgba(203,203,255,1) 40%, rgba(151,237,255,1) 100%);
 }
 
 .app {
@@ -25,6 +27,8 @@ body {
 
 .app__header h1 {
   font-size: 3rem;
+  color: whitesmoke;
+  align-items: center;
 }
 
 .app__left {
